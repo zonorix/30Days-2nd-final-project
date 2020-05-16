@@ -1,0 +1,61 @@
+@import "../module/mixins";
+
+.service {
+  padding: 130px 0 125px;
+  background-color: #f3f3f3;
+
+  &__inner {
+    height: 400px;
+    padding: 0 24px;
+    background-color: $blackBack;
+  }
+
+  &__title {
+    @include sectionTitle;
+
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__container {
+    max-width: 960px;
+    padding: 54px 48px;
+    margin: auto;
+    background-color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 26.736111%;
+  }
+
+  &__item-name {
+    @include englishFont;
+    order: 1;
+    margin-top: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.38;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__figure {
+    order: 0;
+    text-align: center;
+  }
+
+  &__desc {
+    order: 2;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}

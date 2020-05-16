@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+$layout-width-inner: 1180px;
+
+$blackBack: #3e3e3e;
+
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin mq($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin retina {
+  @media only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+@mixin englishFont {
+  font-family: "Montserrat", sans-serif;
+}
+@mixin imgDef {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+@mixin sectionTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1;
+}
+@mixin yellowBtn {
+  height: 56px;
+  padding: 14px 48px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background-color: #ffaa3b;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+  transition: 0.3s;
+  @include mq("sp") {
+    min-width: 240px;
+  }
+  &:hover {
+    background-color: #f18900;
+  }
+  &:disabled {
+    background-color: #b2b2b2;
+    cursor: default;
+  }
+}
+@mixin outlineBtn {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 20px 86px;
+  transition: 0.3s;
+}

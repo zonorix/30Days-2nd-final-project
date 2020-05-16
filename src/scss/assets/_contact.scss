@@ -1,0 +1,285 @@
+@import "../module/mixins";
+
+.contact {
+  padding: 80px 24px;
+  margin-top: 130px;
+  background: url(/images/contact-back_min.png) center/cover no-repeat;
+  @include retina {
+    background: url(/images/contact-back@2x_min.png) center/cover no-repeat;
+  }
+  &__container {
+    max-width: 960px;
+    margin: auto;
+  }
+  &__head {
+    position: relative;
+    background: url(/images/contact-head_min.png) center/cover no-repeat;
+    @include retina {
+      background: url(/images/contact-head@2x_min.png) center/cover no-repeat;
+    }
+    padding: 54px 0;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.16);
+  }
+  &__title {
+    @include sectionTitle;
+    text-align: center;
+  }
+  &__sub-title {
+    line-height: 1;
+    margin-top: 12px;
+    text-align: center;
+  }
+  &__form {
+    background-color: #fff;
+    padding: 60px 90px;
+    border-radius: 0 0 12px 12px;
+  }
+  &__item-wrap {
+    display: flex;
+    justify-content: flex-start;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+    &--message {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    &--privacy {
+      margin-top: 30px;
+    }
+  }
+  &__form-label {
+    min-width: 195px;
+    white-space: nowrap;
+    font-size: 22px;
+    line-height: 29px;
+    margin-right: 80 / 780 * 100%;
+    &--required {
+      @extend .contact__form-label;
+      position: relative;
+      &::after {
+        content: "必須";
+        color: #fff;
+        background-color: #ff4646;
+        border-radius: 5px;
+        padding: 0 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  &__form-select-wrap {
+    position: relative;
+    width: 260 / 780 * 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #3e3e3e;
+      border-bottom: 2px solid #3e3e3e;
+      transform: rotate(45deg);
+    }
+  }
+  &__form-select {
+    width: 100%;
+    padding: 0 7.7%;
+    font-size: 18px;
+    cursor: pointer;
+    appearance: none;
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 0 0 4px rgb(73, 115, 255);
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  &__form-name,
+  &__form-kana,
+  &__form-email,
+  &__form-gender {
+    width: 100%;
+    font-size: 22px;
+    padding: 0 10px;
+    border-radius: 0;
+    appearance: none;
+    font-family: inherit;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-bottom: 1px solid #3e3e3e;
+    &::placeholder {
+      color: rgba(62, 62, 62, 0.5);
+    }
+  }
+  &__form-name,
+  &__form-kana,
+  &__form-email {
+    transition: 0.2s;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 3px -3px rgba(73, 115, 255, 0.2);
+      border-color: rgba(73, 115, 255, 0.2);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__gender-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+  &__gender-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 1.25em;
+    cursor: pointer;
+    &:not(first-child) {
+      margin-left: 60px;
+    }
+    &:hover {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+      }
+    }
+    &:active {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        background-color: #d1d9f5;
+      }
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1em;
+      height: 1em;
+      margin: auto;
+      border: 1px solid #767676;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::after {
+      content: "";
+      background: #3f51b5;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      height: 0.5em;
+      width: 0.5em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 4px;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &__gender-radio:checked + &__gender-label::after {
+    opacity: 1;
+  }
+  [data-whatinput="keyboard"] &__gender-radio:focus + &__gender-label::before {
+    border-color: rgba(73, 115, 255, 0.6);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+  }
+  &__form-message {
+    margin-top: 10px;
+    height: 216px;
+    transition: 0.2s;
+    &:hover,
+    &:focus {
+      border-color: rgba(73, 115, 255, 0.6);
+      box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__form-privacy {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+  }
+  &__privacy-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    &:hover {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+      }
+    }
+    &:active {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        background-color: #d1d9f5;
+      }
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      margin: auto;
+      border: 1px solid #767676;
+      border-radius: 3px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::after {
+      border-bottom: 2px solid #3f51b5;
+      border-left: 2px solid #3f51b5;
+      content: "";
+      display: block;
+      width: 1em;
+      height: 0.6em;
+      left: 2px;
+      margin-top: -0.2em;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: all 0.3s ease 0s;
+      opacity: 0;
+    }
+  }
+  &__form-privacy:checked + &__privacy-label::after {
+    opacity: 1;
+  }
+  [data-whatinput="keyboard"] &__form-privacy:focus + &__privacy-label::before {
+    border-color: rgba(73, 115, 255, 0.6);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+  }
+  &__submit-btn {
+    margin-top: 30px;
+    @include yellowBtn;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../module/mixins";
+
+.access {
+  position: relative;
+  padding: 130px 24px 0;
+  &__container {
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  &__address-wrap {
+    min-width: 326px;
+    margin-right: 16px;
+    color: #fff;
+  }
+  &__title {
+    @include sectionTitle;
+  }
+  &__address-text {
+    margin-top: 40px;
+  }
+  &__btn {
+    @include outlineBtn;
+    margin-top: 40px;
+    text-transform: capitalize;
+    color: inherit;
+    border: 1px solid #fff;
+    &:hover {
+      color: #000;
+      background: #fff;
+    }
+  }
+  &__iframe-wrap {
+    width: 720px;
+  }
+  &__iframe-wrap-inner {
+    position: relative;
+    width: 100%;
+    padding-top: calc(515 / 720 * 100%);
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

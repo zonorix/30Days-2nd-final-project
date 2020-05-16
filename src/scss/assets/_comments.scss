@@ -1,0 +1,59 @@
+@import "../module/mixins";
+
+.comments {
+  position: relative;
+  padding: 0 24px;
+  &__container {
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  &__text-wrap {
+    background-color: #fff;
+    width: 644 / 1180 * 100%;
+    padding: 0 40px;
+  }
+  &__title {
+    @include sectionTitle;
+    padding: 80px 0;
+  }
+  &__list-item {
+    padding-left: 150px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &--name-1 {
+      @extend .comments__list-item;
+      &::before {
+        background: url(/images/comments-1_min.png) left top/contain;
+        @include retina {
+          background: url(/images/comments-1@2x_min.png) left top/contain;
+        }
+      }
+    }
+    &--name-2 {
+      @extend .comments__list-item;
+      margin-top: 76px;
+      &::before {
+        background: url(/images/comments-2_min.png) left top/contain;
+        @include retina {
+          background: url(/images/comments-2@2x@in_min.png) left top/contain;
+        }
+      }
+    }
+  }
+  &__figure {
+    width: 537 / 1180 * 100%;
+  }
+  &__img {
+    @include imgDef;
+    margin-top: 126px;
+  }
+}
