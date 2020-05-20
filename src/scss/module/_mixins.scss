@@ -50,7 +50,7 @@ $breakpoints: (
   background-color: #ffaa3b;
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
-  transition: 0.3s;
+  transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
   @include mq("sp") {
     min-width: 240px;
   }
@@ -61,6 +61,10 @@ $breakpoints: (
     background-color: #b2b2b2;
     cursor: default;
   }
+  [data-whatinput="keyboard"] &:focus {
+    border: 1.4px solid rgb(73, 115, 255);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
+  }
 }
 @mixin outlineBtn {
   display: block;
@@ -69,5 +73,9 @@ $breakpoints: (
   font-weight: 600;
   line-height: 1;
   padding: 20px 86px;
-  transition: 0.3s;
+  transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
+  [data-whatinput="keyboard"] &:focus {
+    border: 1.4px solid rgb(73, 115, 255);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
+  }
 }

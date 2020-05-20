@@ -279,7 +279,8 @@
     box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
   }
   &__submit-btn {
-    margin-top: 30px;
+    display: block;
+    margin: 30px auto 0;
     @include yellowBtn;
   }
 }

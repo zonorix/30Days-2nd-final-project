@@ -83,7 +83,11 @@
             <p class="header__message--sub">
               どこへ越しても住みにくいと悟った時、詩が生まれて、画が出来る。意地を通せば窮屈だ。
             </p>
-            <button class="header__message--btn" onclick="location.href='#'">
+            <button
+              type="button"
+              class="header__message--btn"
+              onclick="location.href='#'"
+            >
               お問い合せしてみる
             </button>
           </div>
@@ -311,7 +315,11 @@
             <div class="swiper-pagination results__swiper-pagination"></div>
           </div>
           <div class="results__btn-wrap">
-            <button class="results__btn" onclick="location.href='#'">
+            <button
+              type="button"
+              class="results__btn"
+              onclick="location.href='#'"
+            >
               view all
             </button>
           </div>
@@ -374,26 +382,26 @@
           <div class="faq__container">
             <h2 class="faq__title">Q&A</h2>
             <dl class="faq__list">
-              <div class="faq__list-item" id="js-answerToggle">
-                <dt class="faq__question">
+              <div class="faq__list-item">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
-                    <button
-                      aria-controls="faqAnswer-1"
-                      aria-expanded="false"
-                      type="button"
-                      class="faq__toggle js-answerToggle"
-                    >
-                      <span class="faq__toggle--line">
-                        <span class="faq__visually-hidden">
-                          回答を開閉する
-                        </span>
-                      </span>
-                    </button>
                   </p>
+                  <button
+                    aria-controls="faqAnswer-1"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer" id="faqAnswer-1">
+                <dd class="faq__answer close js-answer" id="faqAnswer-1">
                   <p class="faq__answer-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Totam libero obcaecati quae!
@@ -401,56 +409,100 @@
                 </dd>
               </div>
               <div class="faq__list-item">
-                <dt class="faq__question">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
                   </p>
-                  <button class="faq__toggle-btn">回答の開閉</button>
+                  <button
+                    aria-controls="faqAnswer-2"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer">
+                <dd class="faq__answer close js-answer" id="faqAnswer-2">
                   <p class="faq__answer-text">
                     Lorem ipsum dolor sit amet consectetur
                   </p>
                 </dd>
               </div>
               <div class="faq__list-item">
-                <dt class="faq__question">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
                   </p>
-                  <button class="faq__toggle-btn">回答の開閉</button>
+                  <button
+                    aria-controls="faqAnswer-3"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer">
+                <dd class="faq__answer close js-answer" id="faqAnswer-3">
                   <p class="faq__answer-text">
                     回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                   </p>
                 </dd>
               </div>
               <div class="faq__list-item">
-                <dt class="faq__question">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
                   </p>
-                  <button class="faq__toggle-btn">回答の開閉</button>
+                  <button
+                    aria-controls="faqAnswer-4"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer">
+                <dd class="faq__answer close js-answer" id="faqAnswer-4">
                   <p class="faq__answer-text">
                     回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                   </p>
                 </dd>
               </div>
               <div class="faq__list-item">
-                <dt class="faq__question">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
                   </p>
-                  <button class="faq__toggle-btn">回答の開閉</button>
+                  <button
+                    aria-controls="faqAnswer-5"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer">
+                <dd class="faq__answer close js-answer" id="faqAnswer-5">
                   <p class="faq__answer-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Totam libero obcaecati quae!
@@ -458,14 +510,25 @@
                 </dd>
               </div>
               <div class="faq__list-item">
-                <dt class="faq__question">
+                <dt class="faq__question js-accordionToggle">
                   <p class="faq__question-text">
-                    <span class="faq__question--q">q</span>
+                    <span class="faq__question-text--q">q</span>
                     質問質問質問？
                   </p>
-                  <button class="faq__toggle-btn">回答の開閉</button>
+                  <button
+                    aria-controls="faqAnswer-6"
+                    aria-expanded="false"
+                    type="button"
+                    class="faq__toggle-btn js-faqToggleBtn"
+                  >
+                    <span class="faq__toggle-line">
+                      <span class="faq__visually-hidden">
+                        回答を開閉する
+                      </span>
+                    </span>
+                  </button>
                 </dt>
-                <dd class="faq__answer">
+                <dd class="faq__answer close js-answer" id="faqAnswer-6">
                   <p class="faq__answer-text">
                     回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答
                   </p>
@@ -613,7 +676,11 @@
                 >個人情報保護方針に同意する</label
               >
             </div>
-            <button class="contact__submit-btn" onclick="location.href=''">
+            <button
+              type="button"
+              class="contact__submit-btn"
+              onclick="location.href=''"
+            >
               送信する
             </button>
           </form>
@@ -633,13 +700,13 @@
           </div>
           <ul class="footer__list">
             <li class="footer__list-item">
-              <a class="footer__list-link">サイトマップ</a>
+              <a href="" class="footer__list-link">サイトマップ</a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__list-link">個人情報保護方針</a>
+              <a href="" class="footer__list-link">個人情報保護方針</a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__list-link">プライバシーポリシー</a>
+              <a href="" class="footer__list-link">プライバシーポリシー</a>
             </li>
           </ul>
         </div>
