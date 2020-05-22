@@ -93,7 +93,7 @@ const serve = (done) => {
     startPath: "index.html",
     notify: false,
     open: "external",
-    // host: "192.168.11.14",
+    host: "192.168.11.15",
   });
   done();
 };
