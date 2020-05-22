@@ -21,7 +21,7 @@
         alt="ページの先頭へ戻るボタン"
       />
     </div>
-    <header class="header js-overlay">
+    <header class="header">
       <nav class="nav js-drawer" id="spNav">
         <ul class="nav__list">
           <li class="nav__list-item">
@@ -63,8 +63,8 @@
         aria-controls="spNav"
         aria-expanded="false"
         type="button"
-        id="js-hamburgerToggle"
         class="nav__toggle"
+        id="js-drawerToggle"
       >
         <span class="nav__toggle--line">
           <span class="nav__visually-hidden">
@@ -72,7 +72,7 @@
           </span>
         </span>
       </button>
-      <div class="header__mainvisual">
+      <div class="header__mainvisual js-overlay" id="js-drawerClose">
         <div class="header__mainvisual-inner">
           <div class="header__message">
             <h2 class="header__message--main">
@@ -88,7 +88,7 @@
               class="header__message--btn"
               onclick="location.href='#'"
             >
-              お問い合せしてみる
+              お問い合せはこちら
             </button>
           </div>
         </div>
@@ -130,60 +130,57 @@
               </a>
             </li>
           </ul>
-          <button class="news__btn" onclick="location.href='#'">
-            more
-          </button>
+          <div class="news__btn-wrap">
+            <button class="news__btn" onclick="location.href='#'">
+              more
+            </button>
+          </div>
         </div>
       </section>
       <section class="service">
-        <div class="service__inner">
-          <h2 class="service__title">service</h2>
-          <div class="service__container">
-            <ul class="service__list">
-              <li class="service__item">
-                <h3 class="service__item-name">web<br />design</h3>
-                <figure class="service__figure">
-                  <img
-                    class="service__img"
-                    src="/images/service-design_min.svg"
-                    alt=""
-                  />
-                </figure>
-                <p class="service__desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Culpa, exercitationem.
-                </p>
-              </li>
-              <li class="service__item">
-                <h3 class="service__item-name">web<br />coding</h3>
-                <figure class="service__figure">
-                  <img
-                    class="service__img"
-                    src="/images/service-coding_min.svg"
-                    alt=""
-                  />
-                </figure>
-                <p class="service__desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Culpa, exercitationem.
-                </p>
-              </li>
-              <li class="service__item">
-                <h3 class="service__item-name">cms<br />customize</h3>
-                <figure class="service__figure">
-                  <img
-                    class="service__img"
-                    src="/images/service-cms_min.svg"
-                    alt=""
-                  />
-                </figure>
-                <p class="service__desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Culpa, exercitationem.
-                </p>
-              </li>
-            </ul>
-          </div>
+        <h2 class="service__title">service</h2>
+        <div class="service__container">
+          <ul class="service__list">
+            <li class="service__item">
+              <h3 class="service__item-name">web<br />design</h3>
+              <figure class="service__figure">
+                <img
+                  class="service__img"
+                  src="/images/service-design_min.svg"
+                  alt=""
+                />
+              </figure>
+              <p class="service__desc">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。.
+              </p>
+            </li>
+            <li class="service__item">
+              <h3 class="service__item-name">web<br />coding</h3>
+              <figure class="service__figure">
+                <img
+                  class="service__img"
+                  src="/images/service-coding_min.svg"
+                  alt=""
+                />
+              </figure>
+              <p class="service__desc">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。.
+              </p>
+            </li>
+            <li class="service__item">
+              <h3 class="service__item-name">cms<br />customize</h3>
+              <figure class="service__figure">
+                <img
+                  class="service__img"
+                  src="/images/service-cms_min.svg"
+                  alt=""
+                />
+              </figure>
+              <p class="service__desc">
+                どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。.
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="results">
@@ -546,9 +543,11 @@
                 東京都港区六本木 6丁目 10-1<br />
                 六本木ヒルズ森タワー
               </p>
-              <button class="access__btn" onclick="location.href='#'">
-                google maps
-              </button>
+              <div class="access__btn-wrap">
+                <button class="access__btn" onclick="location.href='#'">
+                  google maps
+                </button>
+              </div>
             </div>
             <div class="access__iframe-wrap">
               <div class="access__iframe-wrap-inner">
@@ -689,8 +688,8 @@
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <div class="footer__left-area">
-          <div class="footer__sns-icon">
+        <div class="footer__icon-area">
+          <div class="footer__sns-icons">
             <a href="https://twitter.com" class="footer__twitter-link">
               <i class="fab fa-twitter footer__icon--twitter"></i>
             </a>
@@ -710,7 +709,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__right-area">
+        <div class="footer__logo-area">
           <p class="footer__logo">
             <a href="#" class="footer__logo-link">
               haniwaman <span>corp.</span>

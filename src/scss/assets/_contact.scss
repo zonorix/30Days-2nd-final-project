@@ -4,6 +4,9 @@
   padding: 80px 24px;
   margin-top: 130px;
   background: url(/images/contact-back_min.png) center/cover no-repeat;
+  @include mq("sp") {
+    padding: 40px 16px;
+  }
   @include retina {
     background: url(/images/contact-back@2x_min.png) center/cover no-repeat;
   }
@@ -21,6 +24,9 @@
     color: #fff;
     border-radius: 12px 12px 0 0;
     box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.16);
+    @include mq("sp") {
+      padding: 34px 0;
+    }
   }
   &__title {
     @include sectionTitle;
@@ -30,15 +36,25 @@
     line-height: 1;
     margin-top: 12px;
     text-align: center;
+    @include mq("sp") {
+      font-size: 14px;
+      margin-top: 10px;
+    }
   }
   &__form {
     background-color: #fff;
     padding: 60px 90px;
     border-radius: 0 0 12px 12px;
+    @include mq("sp") {
+      padding: 40px 16px;
+    }
   }
   &__item-wrap {
     display: flex;
     justify-content: flex-start;
+    @include mq("sp") {
+      display: block;
+    }
     &:not(:first-child) {
       margin-top: 40px;
     }
@@ -57,6 +73,9 @@
     font-size: 22px;
     line-height: 29px;
     margin-right: 80 / 780 * 100%;
+    @include mq("sp") {
+      font-size: 16px;
+    }
     &--required {
       @extend .contact__form-label;
       position: relative;
@@ -69,12 +88,19 @@
         position: absolute;
         top: 0;
         right: 0;
+        @include mq("sp") {
+          position: relative;
+          margin-left: 20px;
+        }
       }
     }
   }
   &__form-select-wrap {
     position: relative;
     width: 260 / 780 * 100%;
+    @include mq("sp") {
+      width: 100%;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -86,6 +112,9 @@
       border-right: 2px solid #3e3e3e;
       border-bottom: 2px solid #3e3e3e;
       transform: rotate(45deg);
+      @include mq("sp") {
+        right: 10px;
+      }
     }
   }
   &__form-select {
@@ -95,6 +124,11 @@
     cursor: pointer;
     appearance: none;
     transition: 0.2s;
+    @include mq("sp") {
+      margin-top: 10px;
+      padding: 0 10px;
+      font-size: 16px;
+    }
     &:hover {
       box-shadow: 0 0 4px rgb(73, 115, 255);
     }
@@ -116,6 +150,10 @@
     background-image: none;
     border: none;
     border-bottom: 1px solid #3e3e3e;
+    @include mq("sp") {
+      margin-top: 10px;
+      font-size: 16px;
+    }
     &::placeholder {
       color: rgba(62, 62, 62, 0.5);
     }
@@ -148,7 +186,7 @@
     position: relative;
     padding-left: 1.25em;
     cursor: pointer;
-    &:not(first-child) {
+    &:not(:first-of-type) {
       margin-left: 60px;
     }
     &:hover {
@@ -205,6 +243,10 @@
     margin-top: 10px;
     height: 216px;
     transition: 0.2s;
+    font-size: 22px;
+    @include mq("sp") {
+      font-size: 16px;
+    }
     &:hover,
     &:focus {
       border-color: rgba(73, 115, 255, 0.6);
@@ -282,5 +324,8 @@
     display: block;
     margin: 30px auto 0;
     @include yellowBtn;
+    @include mq("sp") {
+      margin-top: 20px;
+    }
   }
 }

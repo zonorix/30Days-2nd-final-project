@@ -1,6 +1,9 @@
 (function () {
   // ドロワーメニュー開閉処理
-  document.getElementById("js-hamburgerToggle").onclick = function () {
+  const hamburgerToggle = document.getElementById("js-drawerToggle");
+  const drawerClose = document.getElementById("js-drawerClose");
+
+  hamburgerToggle.addEventListener("click", function () {
     if (this.getAttribute("aria-expanded") == "false") {
       this.setAttribute("aria-expanded", "true");
       const elements = document.querySelectorAll(".js-drawer, .js-overlay");
@@ -14,7 +17,17 @@
         element.classList.remove("is-drawerActive");
       });
     }
-  };
+  });
+
+  drawerClose.addEventListener("click", function () {
+    if (hamburgerToggle.getAttribute("aria-expanded") == "true") {
+      hamburgerToggle.setAttribute("aria-expanded", "false");
+      const elements = document.querySelectorAll(".js-drawer, .js-overlay");
+      Array.prototype.forEach.call(elements, function (element) {
+        element.classList.remove("is-drawerActive");
+      });
+    }
+  });
 
   // アコーディオン開閉処理
   const faqToggles = document.querySelectorAll(".js-accordionToggle");

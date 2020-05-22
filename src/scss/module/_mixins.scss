@@ -39,6 +39,9 @@ $breakpoints: (
   font-weight: 600;
   text-transform: capitalize;
   line-height: 1;
+  @include mq("sp") {
+    font-size: 30px;
+  }
 }
 @mixin yellowBtn {
   height: 56px;
@@ -52,7 +55,7 @@ $breakpoints: (
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
   transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
   @include mq("sp") {
-    min-width: 240px;
+    padding: 13.5px 24px;
   }
   &:hover {
     background-color: #f18900;
@@ -72,10 +75,17 @@ $breakpoints: (
   font-size: 20px;
   font-weight: 600;
   line-height: 1;
-  padding: 20px 86px;
+  padding: 20px 85px;
+  letter-spacing: 0.2em;
   transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
   [data-whatinput="keyboard"] &:focus {
     border: 1.4px solid rgb(73, 115, 255);
     box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
+  }
+  @include mq("sp") {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 18px;
+    margin: 40px 0;
   }
 }

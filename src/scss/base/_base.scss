@@ -1,5 +1,4 @@
 body {
-  background-color: #f3f3f3;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
     HelveticaNeue, "游ゴシック体", YuGothic, "游ゴシック Medium",
@@ -15,6 +14,10 @@ body {
 
   /* safari hover対策 */
   -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background-color: #f3f3f3;
 }
 
 /* IE11だけに適応 */

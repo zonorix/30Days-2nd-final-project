@@ -14,7 +14,6 @@
   }
   &__bg-black {
     position: relative;
-    background-color: #f3f3f3;
     &::before {
       content: "";
       background-color: #3e3e3e;
@@ -23,6 +22,14 @@
       top: 150px;
       bottom: 72px;
       width: 71.7%;
+      @include mq("tab") {
+        bottom: -30px;
+      }
+      @include mq("sp") {
+        width: 100%;
+        top: 60px;
+        bottom: 0;
+      }
     }
   }
 }

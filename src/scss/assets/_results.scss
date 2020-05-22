@@ -1,8 +1,8 @@
 @import "../module/mixins";
 
 .results {
-  padding-top: 130px;
-  background-color: #f3f3f3;
+  margin-top: 130px;
+
   &__container {
     padding: 0 0 80px 110px;
     background-color: $blackBack;
@@ -81,6 +81,9 @@
       padding-right: 16px;
     }
   }
+  &__btn-wrap {
+    padding-right: 16px;
+  }
   &__btn {
     @include outlineBtn;
     text-transform: uppercase;
@@ -89,6 +92,7 @@
     color: #fff;
     @include mq("sp") {
       width: 100%;
+      margin-bottom: 0;
     }
     &:hover {
       color: #000;

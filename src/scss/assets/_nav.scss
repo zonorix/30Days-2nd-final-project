@@ -8,7 +8,7 @@
   width: 100%;
   height: 80px;
   padding: 0 10px;
-  background-color: #d6d6da;
+  background: rgba(255, 255, 255, 0.1);
   &__list {
     display: flex;
     justify-content: space-between;
@@ -22,6 +22,9 @@
     font-weight: 400;
     &:not(:nth-child(6)) {
       text-transform: capitalize;
+    }
+    &:nth-child(6) {
+      text-transform: uppercase;
     }
   }
   &__item-link {
@@ -65,7 +68,7 @@
     &__list {
       flex-direction: column;
     }
-    &__item {
+    &__list-item {
       width: 100%;
       padding: 0;
       font-size: 18px;
@@ -86,7 +89,8 @@
       height: 68px;
       padding: 16px;
       padding: 0 16px;
-      background-color: #fff;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.6);
     }
     &__sp-logo-img {
       @include imgDef;
@@ -120,8 +124,8 @@
         margin: auto;
         background-color: #3e3e3e;
         border-radius: 16px;
-        transition: inherit;
-        transition: 0.1s;
+        // transition: inherit;
+        // transition: 0.1s;
         &::before,
         &::after {
           position: absolute;
@@ -131,8 +135,7 @@
           content: "";
           background-color: inherit;
           border-radius: 16px;
-          transition: inherit;
-          transition: 0.1s;
+          transition: transform 0.1s;
         }
         &::before {
           top: -8px;

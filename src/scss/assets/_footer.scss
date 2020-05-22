@@ -3,11 +3,24 @@
 .footer {
   background-color: #3e3e3e;
   padding: 120px 24px;
+  @include mq("sp") {
+    padding: 60px 16px;
+  }
   &__container {
     max-width: 1180px;
     display: flex;
     justify-content: space-between;
     margin: auto;
+    @include mq("sp") {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__sns-icons {
+    @include mq("sp") {
+      display: flex;
+      justify-content: space-around;
+    }
   }
   &__icon {
     font-size: 2.25em;
@@ -22,6 +35,11 @@
   }
   &__list {
     margin-top: 40px;
+    @include mq("sp") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__list-item {
     color: #fff;
@@ -29,14 +47,31 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
+    @include mq("sp") {
+      font-size: 14px;
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+      &:last-child {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
   }
-  &__right-area {
+  &__logo-area {
     text-align: right;
+    @include mq("sp") {
+      text-align: center;
+      margin-top: 60px;
+    }
   }
   &__logo {
     text-transform: uppercase;
     color: #e3e3e3;
     font-size: 44px;
+    @include mq("sp") {
+      font-size: 34.4px;
+    }
     span {
       text-transform: capitalize;
     }

@@ -1,9 +1,10 @@
 @import "../module/mixins";
 
 .price {
-  padding: 0 24px;
-  background-color: #f3f3f3;
-  padding-bottom: 130px;
+  padding: 0 24px 130px;
+  @include mq("sp") {
+    padding: 0 16px 60px;
+  }
   &__container {
     max-width: 960px;
     margin: auto;
@@ -12,6 +13,9 @@
     @include sectionTitle;
     padding: 60px 0;
     text-align: center;
+    @include mq("sp") {
+      padding: 40px 0;
+    }
   }
   &__table {
     width: 100%;
