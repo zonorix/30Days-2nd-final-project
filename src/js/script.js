@@ -31,6 +31,7 @@
 
   // アコーディオン開閉処理
   const faqToggles = document.querySelectorAll(".js-accordionToggle");
+
   Array.prototype.forEach.call(faqToggles, function (faqToggle) {
     faqToggle.addEventListener("click", function () {
       const answer = faqToggle.nextElementSibling;
@@ -46,6 +47,40 @@
       }
     });
   });
+
+  // ページトップへ戻る処理
+  const toTopBtn = document.getElementById("js-toTop");
+
+  function getScrolled() {
+    return window.pageYOffset !== undefined
+      ? window.pageYOffset
+      : document.documentElement.scrollTop;
+  }
+  window.addEventListener("scroll", function () {
+    getScrolled() > 500
+      ? toTopBtn.classList.add("is-active")
+      : toTopBtn.classList.remove("is-active");
+  });
+
+  function toTop(duration) {
+    toTopBtn.addEventListener(
+      "click",
+      function () {
+        const begin = new Date() - 0;
+        const yOffset = window.pageYOffset;
+        const timer = setInterval(function () {
+          let current = new Date() - begin;
+          if (current > duration) {
+            clearInterval(timer);
+            current = duration;
+          }
+          window.scrollTo(0, yOffset * (1 - current / duration));
+        }, 10);
+      },
+      { passive: true }
+    );
+  }
+  toTop(300);
 
   // swiperオプション
   const swiper = new Swiper(".swiper-container", {
