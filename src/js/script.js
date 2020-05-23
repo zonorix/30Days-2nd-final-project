@@ -1,4 +1,22 @@
 (function () {
+  "use strict";
+
+  // ヘッダーナビをスクロールで変更
+  const nav = document.getElementById("js-nav");
+
+  const getScrolled = () => {
+    return window.pageYOffset !== undefined
+      ? window.pageYOffset
+      : document.documentElement.scrollTop;
+  };
+
+  window.addEventListener("scroll", function () {
+    const windowHeight = window.innerHeight;
+    getScrolled() > windowHeight
+      ? nav.classList.add("add-scrolled")
+      : nav.classList.remove("add-scrolled");
+  });
+
   // ドロワーメニュー開閉処理
   const hamburgerToggle = document.getElementById("js-drawerToggle");
   const drawerClose = document.getElementById("js-drawerClose");
@@ -48,39 +66,31 @@
     });
   });
 
-  // ページトップへ戻る処理
+  // スムーススクロールリンク処理(moveTo使用)
+  const headerHeight = () => {
+    return window.innerWidth > 767 ? 80 : 68;
+  };
+  const moveTo = new MoveTo({
+    tolerance: headerHeight(),
+    duration: 800,
+    easing: "easeOutQuart",
+    container: window,
+  });
+
+  const triggers = document.querySelectorAll(".js-smooth-scroll");
+  console.log(triggers);
+  Array.prototype.forEach.call(triggers, function (trigger) {
+    moveTo.registerTrigger(trigger);
+  });
+
+  // トップへ戻るボタン表示非表示
   const toTopBtn = document.getElementById("js-toTop");
 
-  function getScrolled() {
-    return window.pageYOffset !== undefined
-      ? window.pageYOffset
-      : document.documentElement.scrollTop;
-  }
-  window.addEventListener("scroll", function () {
+  window.addEventListener("scroll", () => {
     getScrolled() > 500
       ? toTopBtn.classList.add("is-active")
       : toTopBtn.classList.remove("is-active");
   });
-
-  function toTop(duration) {
-    toTopBtn.addEventListener(
-      "click",
-      function () {
-        const begin = new Date() - 0;
-        const yOffset = window.pageYOffset;
-        const timer = setInterval(function () {
-          let current = new Date() - begin;
-          if (current > duration) {
-            clearInterval(timer);
-            current = duration;
-          }
-          window.scrollTo(0, yOffset * (1 - current / duration));
-        }, 10);
-      },
-      { passive: true }
-    );
-  }
-  toTop(300);
 
   // swiperオプション
   const swiper = new Swiper(".swiper-container", {

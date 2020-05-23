@@ -9,34 +9,43 @@
       href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/what-input@5.1.2/dist/what-input.min.js"></script>
+    <script src="/vendor/moveTo.min.js"></script>
     <link rel="stylesheet" href="/css/index.css" />
     <title>Final project</title>
   </head>
 
   <body>
-    <header class="header">
-      <nav class="nav js-drawer" id="spNav">
+    <header class="header" id="top">
+      <nav class="nav js-drawer" id="js-nav">
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#">news</a>
+            <a class="nav__item-link js-smooth-scroll" href="#news">news</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#service">service</a>
+            <a class="nav__item-link js-smooth-scroll" href="#service"
+              >service</a
+            >
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#results">results</a>
+            <a class="nav__item-link js-smooth-scroll" href="#results"
+              >results</a
+            >
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#price">price</a>
+            <a class="nav__item-link js-smooth-scroll" href="#price">price</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#comments">comments</a>
+            <a class="nav__item-link js-smooth-scroll" href="#comments"
+              >comments</a
+            >
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#faq">faq</a>
+            <a class="nav__item-link js-smooth-scroll" href="#faq">faq</a>
           </li>
           <li class="nav__list-item">
-            <a class="nav__item-link" href="#contact">contact</a>
+            <a class="nav__item-link js-smooth-scroll" href="#contact"
+              >contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -56,7 +65,7 @@
         aria-controls="spNav"
         aria-expanded="false"
         type="button"
-        class="nav__toggle"
+        class="nav__toggle js-toggle"
         id="js-drawerToggle"
       >
         <span class="nav__toggle--line">
@@ -88,7 +97,7 @@
       </div>
     </header>
     <main>
-      <section class="news">
+      <section class="news" id="news">
         <div class="news__container">
           <h2 class="news__title">news</h2>
           <ul class="news__list">
@@ -130,7 +139,7 @@
           </div>
         </div>
       </section>
-      <section class="service">
+      <section class="service" id="service">
         <h2 class="service__title">service</h2>
         <div class="service__container">
           <ul class="service__list">
@@ -176,7 +185,7 @@
           </ul>
         </div>
       </section>
-      <section class="results">
+      <section class="results" id="results">
         <div class="results__container">
           <h2 class="results__title">results</h2>
           <div class="swiper-container results__swiper-container">
@@ -315,7 +324,7 @@
           </div>
         </div>
       </section>
-      <section class="price">
+      <section class="price" id="price">
         <div class="price__container">
           <h2 class="price__title">price</h2>
           <table class="price__table">
@@ -338,7 +347,7 @@
         </div>
       </section>
       <div class="common__bg-black">
-        <section class="comments">
+        <section class="comments" id="comments">
           <div class="comments__container">
             <div class="comments__text-wrap">
               <h2 class="comments__title">comments</h2>
@@ -368,7 +377,7 @@
             </figure>
           </div>
         </section>
-        <section class="faq">
+        <section class="faq" id="faq">
           <div class="faq__container">
             <h2 class="faq__title">Q&A</h2>
             <dl class="faq__list">
@@ -527,7 +536,7 @@
             </dl>
           </div>
         </section>
-        <section class="access">
+        <section class="access" id="access">
           <div class="access__container">
             <div class="access__address-wrap">
               <h2 class="access__title">access</h2>
@@ -559,7 +568,7 @@
           </div>
         </section>
       </div>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__container">
           <header class="contact__head">
             <h2 class="contact__title">contact us</h2>
@@ -713,7 +722,12 @@
           </small>
         </div>
       </div>
-      <button type="button" class="common__to-top" id="js-toTop">
+      <button
+        type="button"
+        class="common__to-top js-smooth-scroll"
+        id="js-toTop"
+        data-target="#"
+      >
         <span class="common__to-top-hidden">
           ページの先頭に戻る
         </span>
