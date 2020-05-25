@@ -2,15 +2,13 @@
 
 .results {
   margin-top: 130px;
-
   &__container {
+    max-width: calc(50vw + 590px);
+    margin-left: auto;
     padding: 0 0 80px 110px;
     background-color: $blackBack;
-    position: relative;
-    left: 93px;
     @include mq("sp") {
       padding: 0 0 40px 16px;
-      position: static;
     }
   }
   &__swiper-slide {
