@@ -1,41 +1,42 @@
-@import "../module/mixins";
+@import '../module/mixins';
 
 .footer {
   background-color: #3e3e3e;
   padding: 120px 24px;
-  @include mq("sp") {
+  @include mq('sp') {
     padding: 60px 16px;
   }
   &__container {
-    max-width: 1180px;
     display: flex;
     justify-content: space-between;
     margin: auto;
-    @include mq("sp") {
+    max-width: 1180px;
+    @include mq('sp') {
       display: block;
       text-align: center;
     }
   }
   &__sns-icons {
-    @include mq("sp") {
+    @include mq('sp') {
       display: flex;
       justify-content: space-around;
     }
   }
   &__icon {
-    font-size: 2.25em;
     color: #b1b1b1;
+    font-size: 2.25em;
     &--twitter {
       @extend .footer__icon;
     }
     &--facebook {
       @extend .footer__icon;
+
       margin-left: 20px;
     }
   }
   &__list {
     margin-top: 40px;
-    @include mq("sp") {
+    @include mq('sp') {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -47,29 +48,29 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
-    @include mq("sp") {
+    @include mq('sp') {
       font-size: 14px;
       &:not(:first-child) {
         margin-top: 0;
       }
       &:last-child {
-        width: 100%;
         margin-top: 20px;
+        width: 100%;
       }
     }
   }
   &__logo-area {
     text-align: right;
-    @include mq("sp") {
-      text-align: center;
+    @include mq('sp') {
       margin-top: 60px;
+      text-align: center;
     }
   }
   &__logo {
-    text-transform: uppercase;
     color: #e3e3e3;
     font-size: 44px;
-    @include mq("sp") {
+    text-transform: uppercase;
+    @include mq('sp') {
       font-size: 34.4px;
     }
     span {

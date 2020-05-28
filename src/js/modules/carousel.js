@@ -1,15 +1,15 @@
 const carouselModule = (() => {
-  "use strict";
+  'use strict';
 
   // swiperオプション
-  const swiper = new Swiper(".swiper-container", {
+  const swiper = new Swiper('.swiper-container', {
     loop: true,
     spaceBetween: 28,
     width: 422,
     height: 368,
     pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
+      el: '.swiper-pagination',
+      type: 'bullets',
       clickable: true,
     },
     breakpoints: {

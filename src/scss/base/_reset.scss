@@ -67,12 +67,12 @@ time,
 mark,
 audio,
 video {
-  padding: 0;
-  margin: 0;
-  vertical-align: baseline;
-  background: transparent;
-  border: 0;
-  outline: 0;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
 
 article,
@@ -86,101 +86,101 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: "";
-  content: none;
+	content: "";
+	content: none;
 }
 
 a {
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  text-decoration: none;
-  vertical-align: baseline;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: baseline;
 }
 
 /* change colours to suit your needs */
 ins {
-  color: #000;
-  text-decoration: none;
-  background-color: #ff9;
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-  font-style: italic;
-  font-weight: bold;
-  color: #000;
-  background-color: #ff9;
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
 }
 
 del {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 abbr[title],
 dfn[title] {
-  cursor: help;
-  border-bottom: 1px dotted;
+	border-bottom: 1px dotted;
+	cursor: help;
 }
 
 table {
-  border-spacing: 0;
-  border-collapse: collapse;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-  display: block;
-  height: 1px;
-  padding: 0;
-  margin: 1em 0;
-  border: 0;
-  border-top: 1px solid #ccc;
+	border: 0;
+	border-top: 1px solid #ccc;
+	display: block;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
 }
 
 input,
 select {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 img {
-  line-height: 1;
-  vertical-align: bottom;
+	line-height: 1;
+	vertical-align: bottom;
 }
 
 button {
-  padding: 0;
-  line-height: 1;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	line-height: 1;
+	outline: none;
+	padding: 0;
 }
 
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }

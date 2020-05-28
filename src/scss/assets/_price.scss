@@ -1,47 +1,50 @@
 @import "../module/mixins";
 
 .price {
-  padding: 0 24px 130px;
-  @include mq("sp") {
-    padding: 0 16px 60px;
-  }
-  &__container {
-    max-width: 960px;
-    margin: auto;
-  }
-  &__title {
-    @include sectionTitle;
-    padding: 60px 0;
-    text-align: center;
-    @include mq("sp") {
-      padding: 40px 0;
-    }
-  }
-  &__table {
-    width: 100%;
-  }
-  &__table-head {
-    @include englishFont;
-    background-color: #3e3e3e;
-    color: #fff;
-    font-weight: 600;
-    line-height: 1;
-    border: 1px solid #707070;
-    padding: 20px 0;
-  }
-  &__table-data {
-    @include englishFont;
-    background-color: #fff;
-    font-weight: 600;
-    line-height: 1;
-    border: 1px solid #707070;
-    padding: 20px 0 20px 30px;
-  }
-  &__note {
-    display: block;
-    margin-top: 24px;
-    @include mq("sp") {
-      margin-top: 14px;
-    }
-  }
+	padding: 0 24px 130px;
+	@include mq("sp") {
+		padding: 0 16px 60px;
+	}
+	&__container {
+		margin: auto;
+		max-width: 960px;
+	}
+	&__title {
+		@include sectionTitle;
+
+		padding: 60px 0;
+		text-align: center;
+		@include mq("sp") {
+			padding: 40px 0;
+		}
+	}
+	&__table {
+		width: 100%;
+	}
+	&__table-head {
+		@include englishFont;
+
+		background-color: #3e3e3e;
+		border: 1px solid #707070;
+		color: #fff;
+		font-weight: 600;
+		line-height: 1;
+		padding: 20px 0;
+	}
+	&__table-data {
+		@include englishFont;
+
+		background-color: #fff;
+		border: 1px solid #707070;
+		font-weight: 600;
+		line-height: 1;
+		padding: 20px 0 20px 30px;
+	}
+	&__note {
+		display: block;
+		margin-top: 24px;
+		@include mq("sp") {
+			margin-top: 14px;
+		}
+	}
 }

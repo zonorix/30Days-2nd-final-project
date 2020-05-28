@@ -1,29 +1,29 @@
-const { src, dest, watch, parallel } = require("gulp");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const pxtorem = require("gulp-pxtorem");
-const sass = require("gulp-sass");
-const mqpacker = require("css-mqpacker");
-const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");
-const sassGlob = require("gulp-sass-glob");
-const babel = require("gulp-babel");
-const uglify = require("gulp-uglify");
-const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
-const mozjpeg = require("imagemin-mozjpeg");
-const pngquant = require("imagemin-pngquant");
-const browserSync = require("browser-sync").create();
+const { src, dest, watch, parallel } = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const pxtorem = require('gulp-pxtorem');
+const sass = require('gulp-sass');
+const mqpacker = require('css-mqpacker');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const sassGlob = require('gulp-sass-glob');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const mozjpeg = require('imagemin-mozjpeg');
+const pngquant = require('imagemin-pngquant');
+const browserSync = require('browser-sync').create();
 
 const compileSass = (done) => {
-  src("src/scss/layout/**/*.scss")
+  src('src/scss/layout/**/*.scss')
     .pipe(
-      plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+      plumber({ errorHandler: notify.onError('Error: <%= error.message %>') })
     )
     .pipe(sassGlob())
     .pipe(
       sass({
-        outputStyle: "expanded",
+        outputStyle: 'expanded',
       })
     )
     .pipe(
@@ -36,25 +36,25 @@ const compileSass = (done) => {
     )
     .pipe(postcss([mqpacker()]))
     .pipe(pxtorem())
-    .pipe(dest("dist/css"));
+    .pipe(dest('dist/css'));
   done();
 };
 
 const taskBabel = (done) => {
-  src("src/js/**/*.js")
+  src('src/js/**/*.js')
     .pipe(
       babel({
-        presets: ["@babel/preset-env"],
+        presets: ['@babel/preset-env'],
       })
     )
     .pipe(uglify())
-    .pipe(rename({ extname: ".min.js" }))
-    .pipe(dest("dist/js"));
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(dest('dist/js'));
   done();
 };
 
 const taskImagemin = () =>
-  src("src/images/*")
+  src('src/images/*')
     .pipe(plumber())
     .pipe(
       imagemin([
@@ -73,35 +73,35 @@ const taskImagemin = () =>
         }),
       ])
     )
-    .pipe(rename({ suffix: "_min" }))
-    .pipe(dest("dist/images"));
+    .pipe(rename({ suffix: '_min' }))
+    .pipe(dest('dist/images'));
 
 const serve = (done) => {
   browserSync.init({
     files: [
-      "./**/**/*.html",
-      "./**/**/*.css",
-      "./**/**/*.js",
-      "./**/**/*.png",
-      "./**/**/*.gif",
-      "./**/**/*.jpg",
+      './**/**/*.html',
+      './**/**/*.css',
+      './**/**/*.js',
+      './**/**/*.png',
+      './**/**/*.gif',
+      './**/**/*.jpg',
     ],
     server: {
-      baseDir: "dist/",
-      index: "index.html",
+      baseDir: 'dist/',
+      index: 'index.html',
     },
-    startPath: "index.html",
+    startPath: 'index.html',
     notify: false,
-    open: "external",
-    host: "192.168.11.15",
+    open: 'external',
+    host: '192.168.11.51',
   });
   done();
 };
 
 const watchFiles = (done) => {
-  watch("src/scss/**/*.scss", compileSass);
-  watch("src/js/**/*.js", taskBabel);
-  watch("src/images/*", taskImagemin);
+  watch('src/scss/**/*.scss', compileSass);
+  watch('src/js/**/*.js', taskBabel);
+  watch('src/images/*', taskImagemin);
   done();
 };
 

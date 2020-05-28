@@ -1,83 +1,86 @@
 @import "../module/mixins";
 
 .comments {
-  position: relative;
-  padding: 0 24px;
-  &__container {
-    max-width: 1180px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-  }
-  &__text-wrap {
-    background-color: #fff;
-    width: 644 / 1180 * 100%;
-    padding: 0 40px 120px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
-    @include mq("sp") {
-      width: 100%;
-      padding: 0 20px 40px;
-    }
-  }
-  &__title {
-    @include sectionTitle;
-    padding: 80px 0;
-    @include mq("sp") {
-      padding: 40px 0;
-    }
-  }
-  &__list-item {
-    padding-left: 150px;
-    position: relative;
-    @include mq("sp") {
-      padding-left: 80px;
-      font-size: 14px;
-    }
-    &::before {
-      content: "";
-      width: 100px;
-      height: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      @include mq("sp") {
-        width: 100%;
-        max-width: 56px;
-      }
-    }
-    &--name-1 {
-      @extend .comments__list-item;
-      &::before {
-        background: url(/images/comments-1_min.png) left top/contain no-repeat;
-        @include retina {
-          background: url(/images/comments-1@2x_min.png) left top/contain
-            no-repeat;
-        }
-      }
-    }
-    &--name-2 {
-      @extend .comments__list-item;
-      margin-top: 76px;
-      @include mq("sp") {
-        margin-top: 30px;
-      }
-      &::before {
-        background: url(/images/comments-2_min.png) left top/contain no-repeat;
-        @include retina {
-          background: url(/images/comments-2@2x_min.png) left top/contain
-            no-repeat;
-        }
-      }
-    }
-  }
-  &__figure {
-    width: 537 / 1180 * 100%;
-    @include mq("sp") {
-      display: none;
-    }
-  }
-  &__img {
-    @include imgDef;
-    margin-top: 126px;
-  }
+	padding: 0 24px;
+	position: relative;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		max-width: 1180px;
+	}
+	&__text-wrap {
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+		padding: 0 40px 120px;
+		width: 644 / 1180 * 100%;
+		@include mq("sp") {
+			padding: 0 20px 40px;
+			width: 100%;
+		}
+	}
+	&__title {
+		@include sectionTitle;
+
+		padding: 80px 0;
+		@include mq("sp") {
+			padding: 40px 0;
+		}
+	}
+	&__list-item {
+		padding-left: 150px;
+		position: relative;
+		@include mq("sp") {
+			font-size: 14px;
+			padding-left: 80px;
+		}
+		&::before {
+			content: "";
+			height: 100px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100px;
+			@include mq("sp") {
+				max-width: 56px;
+				width: 100%;
+			}
+		}
+		&--name-1 {
+			@extend .comments__list-item;
+			&::before {
+				background: url(/images/comments-1_min.png) left top/contain no-repeat;
+				@include retina {
+					background: url(/images/comments-1@2x_min.png) left top/contain
+						no-repeat;
+				}
+			}
+		}
+		&--name-2 {
+			@extend .comments__list-item;
+
+			margin-top: 76px;
+			@include mq("sp") {
+				margin-top: 30px;
+			}
+			&::before {
+				background: url(/images/comments-2_min.png) left top/contain no-repeat;
+				@include retina {
+					background: url(/images/comments-2@2x_min.png) left top/contain
+						no-repeat;
+				}
+			}
+		}
+	}
+	&__figure {
+		width: 537 / 1180 * 100%;
+		@include mq("sp") {
+			display: none;
+		}
+	}
+	&__img {
+		@include imgDef;
+
+		margin-top: 126px;
+	}
 }

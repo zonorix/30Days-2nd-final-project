@@ -1,132 +1,133 @@
 @import "../module/mixins";
 
 .faq {
-  position: relative;
-  margin-top: 130px;
-  padding-bottom: 80px;
-  background: url(/images/qa-back_min.png) no-repeat center/cover fixed;
-  @include mq("sp") {
-    margin-top: 60px;
-    padding-bottom: 40px;
-  }
-  @include retina {
-    background: url(/images/qa-back@2x_min.png) no-repeat center/cover fixed;
-  }
-  &__container {
-    max-width: 1180px;
-    padding-right: 16px;
-    margin: auto;
-    @include mq("sp") {
-      padding: 0 16px;
-    }
-  }
-  &__title {
-    @include sectionTitle;
-    padding: 80px 0;
-    text-align: center;
-    @include mq("sp") {
-      padding: 40px 0;
-    }
-  }
-  &__list {
-    margin-left: auto;
-    max-width: 616px;
-    @include mq("sp") {
-      max-width: 100%;
-    }
-  }
-  &__list-item {
-    background-color: #fff;
-    padding: 18px;
-    border-radius: 7px;
-    &:not(:first-child) {
-      margin-top: 40px;
-    }
-  }
-  &__question {
-    position: relative;
-    margin-left: 12px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-  }
-  &__question-text {
-    &--q {
-      display: inline-block;
-      background-color: #3b69ff;
-      border-radius: 50%;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      @include englishFont;
-      font-weight: 600;
-      line-height: 26px;
-      width: 26px;
-    }
-  }
-  &__toggle-btn {
-    width: 15px;
-    height: 15px;
-    transition: outline 0.5s, box-shadow 0.5s;
-    [data-whatinput="keyboard"] &:focus {
-      outline: 1px solid rgb(73, 115, 255);
-      box-shadow: 0 0 2px rgba(73, 115, 255, 0.4);
-    }
-  }
-  &__toggle-line {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 15px;
-      height: 3px;
-      margin-top: -1.75px;
-      background: #3b69ff;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 6px;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 15px;
-      background-color: #3b69ff;
-      transition: opacity 0.36s;
-    }
-  }
-  &__question.is-active .faq__toggle-line::before {
-    opacity: 0;
-  }
-  &__visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-  }
-  &__answer {
-    background-color: #d7e1ff;
-    border-radius: 7px;
-    padding: 0 14px;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    line-height: 0;
-    transition: padding 0.36s, opacity 0.36s, margin-top 0.36s;
-    &.is-open {
-      padding: 18px 14px;
-      margin-top: 20px;
-      line-height: normal;
-      height: auto;
-      opacity: 1;
-    }
-  }
+	background: url(/images/qa-back_min.png) no-repeat center/cover fixed;
+	margin-top: 130px;
+	padding-bottom: 80px;
+	position: relative;
+	@include mq("sp") {
+		margin-top: 60px;
+		padding-bottom: 40px;
+	}
+	@include retina {
+		background: url(/images/qa-back@2x_min.png) no-repeat center/cover fixed;
+	}
+	&__container {
+		margin: auto;
+		max-width: 1180px;
+		padding-right: 16px;
+		@include mq("sp") {
+			padding: 0 16px;
+		}
+	}
+	&__title {
+		@include sectionTitle;
+
+		padding: 80px 0;
+		text-align: center;
+		@include mq("sp") {
+			padding: 40px 0;
+		}
+	}
+	&__list {
+		margin-left: auto;
+		max-width: 616px;
+		@include mq("sp") {
+			max-width: 100%;
+		}
+	}
+	&__list-item {
+		background-color: #fff;
+		border-radius: 7px;
+		padding: 18px;
+		&:not(:first-child) {
+			margin-top: 40px;
+		}
+	}
+	&__question {
+		align-items: center;
+		cursor: pointer;
+		display: flex;
+		font-weight: 700;
+		justify-content: space-between;
+		margin-left: 12px;
+		position: relative;
+	}
+	&__question-text {
+		&--q {
+			background-color: #3b69ff;
+			border-radius: 50%;
+			color: #fff;
+			display: inline-block;
+			font-weight: 600;
+			line-height: 26px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 26px;
+			@include englishFont;
+		}
+	}
+	&__toggle-btn {
+		height: 15px;
+		transition: outline 0.5s, box-shadow 0.5s;
+		width: 15px;
+		[data-whatinput="keyboard"] &:focus {
+			box-shadow: 0 0 2px rgba(73, 115, 255, 0.4);
+			outline: 1px solid rgb(73, 115, 255);
+		}
+	}
+	&__toggle-line {
+		&::after {
+			background: #3b69ff;
+			content: "";
+			height: 3px;
+			margin-top: -1.75px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 15px;
+		}
+		&::before {
+			background-color: #3b69ff;
+			content: "";
+			height: 15px;
+			position: absolute;
+			right: 6px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: opacity 0.36s;
+			width: 3px;
+		}
+	}
+	&__question.is-active .faq__toggle-line::before {
+		opacity: 0;
+	}
+	&__visually-hidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+	&__answer {
+		background-color: #d7e1ff;
+		border-radius: 7px;
+		height: 0;
+		line-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 14px;
+		transition: padding 0.36s, opacity 0.36s, margin-top 0.36s;
+		&.is-open {
+			height: auto;
+			line-height: normal;
+			margin-top: 20px;
+			opacity: 1;
+			padding: 18px 14px;
+		}
+	}
 }
