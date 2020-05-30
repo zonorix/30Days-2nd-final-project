@@ -1,84 +1,84 @@
 @import "../module/mixins";
 
 .service {
-	background: linear-gradient(
-		to bottom,
-		$blackBack 0,
-		$blackBack 400px,
-		transparent 400px,
-		transparent 100%
-	);
-	margin-top: 130px;
-	padding: 0 24px;
-	position: relative;
-	@include mq("sp") {
-		margin-top: 20px;
-		padding: 0 16px;
-	}
-	&__title {
-		@include sectionTitle;
+  background: linear-gradient(
+    to bottom,
+    $blackBack 0,
+    $blackBack 400px,
+    transparent 400px,
+    transparent 100%
+  );
+  margin-top: 130px;
+  padding: 0 24px;
+  position: relative;
+  @include mq("sp") {
+    margin-top: 20px;
+    padding: 0 16px;
+  }
+  &__title {
+    @include sectionTitle;
 
-		color: #fff;
-		padding: 80px 0;
-		text-align: center;
-		@include mq("sp") {
-			padding: 40px 0;
-		}
-	}
-	&__container {
-		background-color: #fff;
-		box-shadow: 0 5px 12px #3e3e3e;
-		margin: auto;
-		max-width: 960px;
-		padding: 54px 48px;
-		@include mq("sp") {
-			padding: 40px 16px;
-		}
-	}
-	&__list {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		@include mq("sp") {
-			display: block;
-		}
-	}
-	&__item {
-		display: flex;
-		flex-direction: column;
-		width: 26.736111%;
-		@include mq("sp") {
-			width: 100%;
-			&:not(:first-child) {
-				margin-top: 65px;
-			}
-		}
-	}
-	&__item-name {
-		@include englishFont;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    @include mq("sp") {
+      padding: 40px 0;
+    }
+  }
+  &__container {
+    background-color: #fff;
+    box-shadow: 0 5px 12px #3e3e3e;
+    margin: auto;
+    max-width: 960px;
+    padding: 54px 48px;
+    @include mq("sp") {
+      padding: 40px 16px;
+    }
+  }
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @include mq("sp") {
+      display: block;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 26.736111%;
+    @include mq("sp") {
+      width: 100%;
+      &:not(:first-child) {
+        margin-top: 65px;
+      }
+    }
+  }
+  &__item-name {
+    @include englishFont;
 
-		font-size: 20px;
-		font-weight: 600;
-		line-height: 1.38;
-		margin-top: 32px;
-		order: 1;
-		text-align: center;
-		text-transform: uppercase;
-		@include mq("sp") {
-			font-size: 18px;
-			margin-top: 28px;
-		}
-	}
-	&__figure {
-		order: 0;
-		text-align: center;
-	}
-	&__desc {
-		font-size: 14px;
-		margin-top: 20px;
-		order: 2;
-		@include mq("sp") {
-			margin-top: 24px;
-		}
-	}
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.38;
+    margin-top: 32px;
+    order: 1;
+    text-align: center;
+    text-transform: uppercase;
+    @include mq("sp") {
+      font-size: 18px;
+      margin-top: 28px;
+    }
+  }
+  &__figure {
+    order: 0;
+    text-align: center;
+  }
+  &__desc {
+    font-size: 14px;
+    margin-top: 20px;
+    order: 2;
+    @include mq("sp") {
+      margin-top: 24px;
+    }
+  }
 }

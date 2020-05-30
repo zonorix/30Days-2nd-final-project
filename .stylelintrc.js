@@ -7,7 +7,7 @@ module.exports = {
   rules:{
     'max-line-length': null,
     'function-url-quotes': 'never',
-    'prettier/prettier': [true, { 'singleQuote': false, 'useTabs': true }],
+    'prettier/prettier': [true, { 'singleQuote': false }],
     'order/properties-alphabetical-order': true,
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': true,

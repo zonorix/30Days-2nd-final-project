@@ -1,333 +1,333 @@
 @import "../module/mixins";
 
 .contact {
-	background: url(/images/contact-back_min.png) center/cover no-repeat;
-	margin-top: 130px;
-	padding: 80px 24px;
-	@include mq("sp") {
-		padding: 40px 16px;
-	}
-	@include retina {
-		background: url(/images/contact-back@2x_min.png) center/cover no-repeat;
-	}
-	&__container {
-		margin: auto;
-		max-width: 960px;
-	}
-	&__head {
-		background: url(/images/contact-head_min.png) center/cover no-repeat;
-		border-radius: 12px 12px 0 0;
-		box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.16);
-		color: #fff;
-		padding: 54px 0;
-		position: relative;
-		@include retina {
-			background: url(/images/contact-head@2x_min.png) center/cover no-repeat;
-		}
-		@include mq("sp") {
-			padding: 34px 0;
-		}
-	}
-	&__title {
-		@include sectionTitle;
+  background: url(/images/contact-back_min.png) center/cover no-repeat;
+  margin-top: 130px;
+  padding: 80px 24px;
+  @include mq("sp") {
+    padding: 40px 16px;
+  }
+  @include retina {
+    background: url(/images/contact-back@2x_min.png) center/cover no-repeat;
+  }
+  &__container {
+    margin: auto;
+    max-width: 960px;
+  }
+  &__head {
+    background: url(/images/contact-head_min.png) center/cover no-repeat;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.16);
+    color: #fff;
+    padding: 54px 0;
+    position: relative;
+    @include retina {
+      background: url(/images/contact-head@2x_min.png) center/cover no-repeat;
+    }
+    @include mq("sp") {
+      padding: 34px 0;
+    }
+  }
+  &__title {
+    @include sectionTitle;
 
-		text-align: center;
-	}
-	&__sub-title {
-		line-height: 1;
-		margin-top: 12px;
-		text-align: center;
-		@include mq("sp") {
-			font-size: 14px;
-			margin-top: 10px;
-		}
-	}
-	&__form {
-		background-color: #fff;
-		border-radius: 0 0 12px 12px;
-		padding: 60px 90px;
-		@include mq("sp") {
-			padding: 40px 16px;
-		}
-	}
-	&__item-wrap {
-		display: flex;
-		justify-content: flex-start;
-		@include mq("sp") {
-			display: block;
-		}
-		&:not(:first-child) {
-			margin-top: 40px;
-		}
-		&--message {
-			display: flex;
-			flex-direction: column;
-			margin-top: 40px;
-		}
-		&--privacy {
-			margin-top: 30px;
-		}
-	}
-	&__form-label {
-		font-size: 22px;
-		line-height: 29px;
-		margin-right: 80 / 780 * 100%;
-		min-width: 195px;
-		white-space: nowrap;
-		@include mq("sp") {
-			font-size: 16px;
-		}
-		&--required {
-			@extend .contact__form-label;
+    text-align: center;
+  }
+  &__sub-title {
+    line-height: 1;
+    margin-top: 12px;
+    text-align: center;
+    @include mq("sp") {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+  &__form {
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 60px 90px;
+    @include mq("sp") {
+      padding: 40px 16px;
+    }
+  }
+  &__item-wrap {
+    display: flex;
+    justify-content: flex-start;
+    @include mq("sp") {
+      display: block;
+    }
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+    &--message {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    &--privacy {
+      margin-top: 30px;
+    }
+  }
+  &__form-label {
+    font-size: 22px;
+    line-height: 29px;
+    margin-right: 80 / 780 * 100%;
+    min-width: 195px;
+    white-space: nowrap;
+    @include mq("sp") {
+      font-size: 16px;
+    }
+    &--required {
+      @extend .contact__form-label;
 
-			position: relative;
-			&::after {
-				background-color: #ff4646;
-				border-radius: 5px;
-				color: #fff;
-				content: "必須";
-				padding: 0 12px;
-				position: absolute;
-				right: 0;
-				top: 0;
-				@include mq("sp") {
-					margin-left: 20px;
-					position: relative;
-				}
-			}
-		}
-	}
-	&__form-select-wrap {
-		position: relative;
-		width: 260 / 780 * 100%;
-		@include mq("sp") {
-			width: 100%;
-		}
-		&::after {
-			border-bottom: 2px solid #3e3e3e;
-			border-right: 2px solid #3e3e3e;
-			bottom: 10px;
-			content: "";
-			display: block;
-			height: 10px;
-			position: absolute;
-			right: 8px;
-			transform: rotate(45deg);
-			width: 10px;
-			@include mq("sp") {
-				right: 10px;
-			}
-		}
-	}
-	&__form-select {
-		appearance: none;
-		cursor: pointer;
-		font-size: 18px;
-		padding: 0 7.7%;
-		transition: 0.2s;
-		width: 100%;
-		@include mq("sp") {
-			font-size: 16px;
-			margin-top: 10px;
-			padding: 0 10px;
-		}
-		&:hover {
-			box-shadow: 0 0 4px rgb(73, 115, 255);
-		}
-		&::-ms-expand {
-			display: none;
-		}
-	}
-	&__form-name,
-	&__form-kana,
-	&__form-email,
-	&__form-gender {
-		appearance: none;
-		background-color: transparent;
-		background-image: none;
-		border: none;
-		border-bottom: 1px solid #3e3e3e;
-		border-radius: 0;
-		font-family: inherit;
-		font-size: 22px;
-		padding: 0 10px;
-		width: 100%;
-		@include mq("sp") {
-			font-size: 16px;
-			margin-top: 10px;
-		}
-		&::placeholder {
-			color: rgba(62, 62, 62, 0.5);
-		}
-	}
-	&__form-name,
-	&__form-kana,
-	&__form-email {
-		transition: 0.2s;
-		&:hover,
-		&:focus {
-			border-color: rgba(73, 115, 255, 0.2);
-			box-shadow: 0 8px 3px -3px rgba(73, 115, 255, 0.2);
-		}
-		&:focus {
-			outline: 0;
-		}
-	}
-	&__gender-radio {
-		border: 0;
-		clip: rect(0, 0, 0, 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
-	&__gender-label {
-		cursor: pointer;
-		display: inline-block;
-		padding-left: 1.25em;
-		position: relative;
-		&:not(:first-of-type) {
-			margin-left: 60px;
-		}
-		&::before {
-			background-repeat: no-repeat;
-			background-size: contain;
-			border: 1px solid #767676;
-			border-radius: 50%;
-			bottom: 0;
-			content: "";
-			display: inline-block;
-			height: 1em;
-			left: 0;
-			margin: auto;
-			position: absolute;
-			top: 0;
-			width: 1em;
-		}
-		&::after {
-			background: #3f51b5;
-			border: 1px solid transparent;
-			border-radius: 50%;
-			bottom: 0;
-			content: "";
-			height: 0.5em;
-			left: 4px;
-			margin: auto;
-			opacity: 0;
-			position: absolute;
-			top: 0;
-			transition: all 0.3s ease 0s;
-			width: 0.5em;
-		}
-		&:hover {
-			&::before {
-				border-color: rgba(73, 115, 255, 0.6);
-				box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
-			}
-		}
-		&:active {
-			&::before {
-				background-color: #d1d9f5;
-				border-color: rgba(73, 115, 255, 0.6);
-			}
-		}
-	}
-	&__gender-radio:checked + &__gender-label::after {
-		opacity: 1;
-	}
-	[data-whatinput="keyboard"] &__gender-radio:focus + &__gender-label::before {
-		border-color: rgba(73, 115, 255, 0.6);
-		box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
-	}
-	&__form-message {
-		font-size: 22px;
-		height: 216px;
-		margin-top: 10px;
-		transition: 0.2s;
-		@include mq("sp") {
-			font-size: 16px;
-		}
-		&:hover,
-		&:focus {
-			border-color: rgba(73, 115, 255, 0.6);
-			box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
-		}
-		&:focus {
-			outline: 0;
-		}
-	}
-	&__form-privacy {
-		border: 0;
-		clip: rect(0, 0, 0, 0);
-		height: 1px;
-		margin: -1px;
-		overflow: hidden;
-		padding: 0;
-		position: absolute;
-		width: 1px;
-	}
-	&__privacy-label {
-		display: inline-block;
-		padding-left: 40px;
-		position: relative;
-		&::before {
-			background-repeat: no-repeat;
-			background-size: contain;
-			border: 1px solid #767676;
-			border-radius: 3px;
-			bottom: 0;
-			content: "";
-			display: inline-block;
-			height: 20px;
-			left: 0;
-			margin: auto;
-			position: absolute;
-			top: 0;
-			width: 20px;
-		}
-		&::after {
-			border-bottom: 2px solid #3f51b5;
-			border-left: 2px solid #3f51b5;
-			content: "";
-			display: block;
-			height: 0.6em;
-			left: 2px;
-			margin-top: -0.2em;
-			opacity: 0;
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%) rotate(-45deg);
-			transition: all 0.3s ease 0s;
-			width: 1em;
-		}
-		&:hover {
-			&::before {
-				border-color: rgba(73, 115, 255, 0.6);
-				box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
-			}
-		}
-		&:active {
-			&::before {
-				background-color: #d1d9f5;
-				border-color: rgba(73, 115, 255, 0.6);
-			}
-		}
-	}
-	&__form-privacy:checked + &__privacy-label::after {
-		opacity: 1;
-	}
-	[data-whatinput="keyboard"] &__form-privacy:focus + &__privacy-label::before {
-		border-color: rgba(73, 115, 255, 0.6);
-		box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
-	}
-	&__submit-btn {
-		display: block;
-		margin: 30px auto 0;
-		@include yellowBtn;
-		@include mq("sp") {
-			margin-top: 20px;
-		}
-	}
+      position: relative;
+      &::after {
+        background-color: #ff4646;
+        border-radius: 5px;
+        color: #fff;
+        content: "必須";
+        padding: 0 12px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include mq("sp") {
+          margin-left: 20px;
+          position: relative;
+        }
+      }
+    }
+  }
+  &__form-select-wrap {
+    position: relative;
+    width: 260 / 780 * 100%;
+    @include mq("sp") {
+      width: 100%;
+    }
+    &::after {
+      border-bottom: 2px solid #3e3e3e;
+      border-right: 2px solid #3e3e3e;
+      bottom: 10px;
+      content: "";
+      display: block;
+      height: 10px;
+      position: absolute;
+      right: 8px;
+      transform: rotate(45deg);
+      width: 10px;
+      @include mq("sp") {
+        right: 10px;
+      }
+    }
+  }
+  &__form-select {
+    appearance: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 7.7%;
+    transition: 0.2s;
+    width: 100%;
+    @include mq("sp") {
+      font-size: 16px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+    &:hover {
+      box-shadow: 0 0 4px rgb(73, 115, 255);
+    }
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  &__form-name,
+  &__form-kana,
+  &__form-email,
+  &__form-gender {
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-bottom: 1px solid #3e3e3e;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 22px;
+    padding: 0 10px;
+    width: 100%;
+    @include mq("sp") {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    &::placeholder {
+      color: rgba(62, 62, 62, 0.5);
+    }
+  }
+  &__form-name,
+  &__form-kana,
+  &__form-email {
+    transition: 0.2s;
+    &:hover,
+    &:focus {
+      border-color: rgba(73, 115, 255, 0.2);
+      box-shadow: 0 8px 3px -3px rgba(73, 115, 255, 0.2);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__gender-radio {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  &__gender-label {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 1.25em;
+    position: relative;
+    &:not(:first-of-type) {
+      margin-left: 60px;
+    }
+    &::before {
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 1px solid #767676;
+      border-radius: 50%;
+      bottom: 0;
+      content: "";
+      display: inline-block;
+      height: 1em;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      width: 1em;
+    }
+    &::after {
+      background: #3f51b5;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      bottom: 0;
+      content: "";
+      height: 0.5em;
+      left: 4px;
+      margin: auto;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: all 0.3s ease 0s;
+      width: 0.5em;
+    }
+    &:hover {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+      }
+    }
+    &:active {
+      &::before {
+        background-color: #d1d9f5;
+        border-color: rgba(73, 115, 255, 0.6);
+      }
+    }
+  }
+  &__gender-radio:checked + &__gender-label::after {
+    opacity: 1;
+  }
+  [data-whatinput="keyboard"] &__gender-radio:focus + &__gender-label::before {
+    border-color: rgba(73, 115, 255, 0.6);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+  }
+  &__form-message {
+    font-size: 22px;
+    height: 216px;
+    margin-top: 10px;
+    transition: 0.2s;
+    @include mq("sp") {
+      font-size: 16px;
+    }
+    &:hover,
+    &:focus {
+      border-color: rgba(73, 115, 255, 0.6);
+      box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__form-privacy {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  &__privacy-label {
+    display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    &::before {
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: 1px solid #767676;
+      border-radius: 3px;
+      bottom: 0;
+      content: "";
+      display: inline-block;
+      height: 20px;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      width: 20px;
+    }
+    &::after {
+      border-bottom: 2px solid #3f51b5;
+      border-left: 2px solid #3f51b5;
+      content: "";
+      display: block;
+      height: 0.6em;
+      left: 2px;
+      margin-top: -0.2em;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+      transition: all 0.3s ease 0s;
+      width: 1em;
+    }
+    &:hover {
+      &::before {
+        border-color: rgba(73, 115, 255, 0.6);
+        box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+      }
+    }
+    &:active {
+      &::before {
+        background-color: #d1d9f5;
+        border-color: rgba(73, 115, 255, 0.6);
+      }
+    }
+  }
+  &__form-privacy:checked + &__privacy-label::after {
+    opacity: 1;
+  }
+  [data-whatinput="keyboard"] &__form-privacy:focus + &__privacy-label::before {
+    border-color: rgba(73, 115, 255, 0.6);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.6);
+  }
+  &__submit-btn {
+    display: block;
+    margin: 30px auto 0;
+    @include yellowBtn;
+    @include mq("sp") {
+      margin-top: 20px;
+    }
+  }
 }

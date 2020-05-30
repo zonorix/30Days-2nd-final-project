@@ -1,76 +1,76 @@
 @import "../module/mixins";
 
 .header {
-	&__mainvisual {
-		background-image: url(/images/mainvisual_min.png);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100vh;
-		padding: 0 24px;
-		@include mq("tab") {
-			background-position: 20% center;
-		}
-		@include mq("sp") {
-			padding: 0 16px;
-		}
-		@include retina {
-			background-image: url(/images/mainvisual@2x_min.png);
-		}
-		&.is-drawerActive::before {
-			background-color: rgba(0, 0, 0, 0.5);
-			content: "";
-			display: block;
-			height: 100%;
-			left: 0;
-			position: fixed;
-			top: 0;
-			width: 100%;
-			z-index: 2;
-		}
-	}
-	&__mainvisual-inner {
-		height: 100%;
-		margin: auto;
-		max-width: 100%;
-		position: relative;
-		width: 1180px;
-	}
-	&__message {
-		padding-bottom: 4.225352112676056%;
-		padding-right: 16px;
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 44.40677966101695%;
-		@include mq("sp") {
-			padding: 0;
-			position: relative;
-			width: 100%;
-		}
-		&--main {
-			font-size: 30px;
-			line-height: 1.6;
-			@include mq("sp") {
-				font-size: 24px;
-			}
-		}
-		&--sub {
-			font-size: 18px;
-			margin-top: 40px;
-			@include mq("sp") {
-				font-size: 16px;
-				line-height: 1.6;
-			}
-		}
-		&--btn {
-			margin-top: 40px;
-			@include yellowBtn;
-			@include mq("sp") {
-				display: block;
-				margin: 40px auto 0;
-			}
-		}
-	}
+  &__mainvisual {
+    background-image: url(/images/mainvisual_min.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 24px;
+    @include mq("tab") {
+      background-position: 20% center;
+    }
+    @include mq("sp") {
+      padding: 0 16px;
+    }
+    @include retina {
+      background-image: url(/images/mainvisual@2x_min.png);
+    }
+    &.is-drawerActive::before {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+    }
+  }
+  &__mainvisual-inner {
+    height: 100%;
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    width: 1180px;
+  }
+  &__message {
+    padding-bottom: 4.225352112676056%;
+    padding-right: 16px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44.40677966101695%;
+    @include mq("sp") {
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+    &--main {
+      font-size: 30px;
+      line-height: 1.6;
+      @include mq("sp") {
+        font-size: 24px;
+      }
+    }
+    &--sub {
+      font-size: 18px;
+      margin-top: 40px;
+      @include mq("sp") {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+    &--btn {
+      margin-top: 40px;
+      @include yellowBtn;
+      @include mq("sp") {
+        display: block;
+        margin: 40px auto 0;
+      }
+    }
+  }
 }

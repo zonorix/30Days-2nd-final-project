@@ -1,9 +1,9 @@
-@import '../module/mixins';
+@import "../module/mixins";
 
 .footer {
   background-color: #3e3e3e;
   padding: 120px 24px;
-  @include mq('sp') {
+  @include mq("sp") {
     padding: 60px 16px;
   }
   &__container {
@@ -11,13 +11,13 @@
     justify-content: space-between;
     margin: auto;
     max-width: 1180px;
-    @include mq('sp') {
+    @include mq("sp") {
       display: block;
       text-align: center;
     }
   }
   &__sns-icons {
-    @include mq('sp') {
+    @include mq("sp") {
       display: flex;
       justify-content: space-around;
     }
@@ -36,7 +36,7 @@
   }
   &__list {
     margin-top: 40px;
-    @include mq('sp') {
+    @include mq("sp") {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -48,7 +48,7 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
-    @include mq('sp') {
+    @include mq("sp") {
       font-size: 14px;
       &:not(:first-child) {
         margin-top: 0;
@@ -61,7 +61,7 @@
   }
   &__logo-area {
     text-align: right;
-    @include mq('sp') {
+    @include mq("sp") {
       margin-top: 60px;
       text-align: center;
     }
@@ -70,7 +70,7 @@
     color: #e3e3e3;
     font-size: 44px;
     text-transform: uppercase;
-    @include mq('sp') {
+    @include mq("sp") {
       font-size: 34.4px;
     }
     span {

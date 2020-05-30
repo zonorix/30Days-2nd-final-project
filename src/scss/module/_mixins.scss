@@ -3,87 +3,87 @@ $layout-width-inner: 1180px;
 $blackBack: #3e3e3e;
 
 $breakpoints: (
-	"sp": "screen and (max-width: 767px)",
-	"tab": "screen and (max-width: #{$layout-width-inner - 1px})",
-	"pc": "screen and (min-width: #{$layout-width-inner})",
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
 );
 @mixin mq($breakpoint: sp) {
-	@media #{map-get($breakpoints, $breakpoint)} {
-		@content;
-	}
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
 }
 @mixin mq($breakpoint: tab) {
-	@media #{map-get($breakpoints, $breakpoint)} {
-		@content;
-	}
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
 }
 @mixin retina {
-	@media only screen and (min-resolution: 2dppx) {
-		@content;
-	}
+  @media only screen and (min-resolution: 2dppx) {
+    @content;
+  }
 }
 @mixin englishFont {
-	font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @mixin imgDef {
-	display: block;
-	height: auto;
-	max-width: 100%;
-	width: 100%;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 @mixin sectionTitle {
-	font-family: "Montserrat", sans-serif;
-	font-size: 36px;
-	font-weight: 600;
-	line-height: 1;
-	text-transform: capitalize;
-	@include mq("sp") {
-		font-size: 30px;
-	}
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: capitalize;
+  @include mq("sp") {
+    font-size: 30px;
+  }
 }
 @mixin yellowBtn {
-	background-color: #ffaa3b;
-	border-radius: 12px;
-	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
-	color: #fff;
-	font-size: 18px;
-	font-weight: 700;
-	height: 56px;
-	line-height: 1;
-	padding: 14px 48px;
-	transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
-	@include mq("sp") {
-		padding: 13.5px 24px;
-	}
-	&:hover {
-		background-color: #f18900;
-	}
-	&:disabled {
-		background-color: #b2b2b2;
-		cursor: default;
-	}
-	[data-whatinput="keyboard"] &:focus {
-		border: 1.4px solid rgb(73, 115, 255);
-		box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
-	}
+  background-color: #ffaa3b;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 56px;
+  line-height: 1;
+  padding: 14px 48px;
+  transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
+  @include mq("sp") {
+    padding: 13.5px 24px;
+  }
+  &:hover {
+    background-color: #f18900;
+  }
+  &:disabled {
+    background-color: #b2b2b2;
+    cursor: default;
+  }
+  [data-whatinput="keyboard"] &:focus {
+    border: 1.4px solid rgb(73, 115, 255);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
+  }
 }
 @mixin outlineBtn {
-	display: block;
-	font-family: "Montserrat", sans-serif;
-	font-size: 20px;
-	font-weight: 600;
-	letter-spacing: 0.2em;
-	line-height: 1;
-	padding: 20px 85px;
-	transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
-	[data-whatinput="keyboard"] &:focus {
-		border: 1.4px solid rgb(73, 115, 255);
-		box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
-	}
-	@include mq("sp") {
-		font-size: 18px;
-		margin: 40px 0;
-		padding: 16px 24px;
-		width: 100%;
-	}
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  padding: 20px 85px;
+  transition: background-color 0.3s, border 0.2s, box-shadow 0.2s;
+  [data-whatinput="keyboard"] &:focus {
+    border: 1.4px solid rgb(73, 115, 255);
+    box-shadow: 0 0 4px rgba(73, 115, 255, 0.4);
+  }
+  @include mq("sp") {
+    font-size: 18px;
+    margin: 40px 0;
+    padding: 16px 24px;
+    width: 100%;
+  }
 }
