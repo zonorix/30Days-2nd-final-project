@@ -42,6 +42,8 @@
     "stylelint-scss": "^3.17.2"
   },
   "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash.template": "^4.5.0",
     "what-input": "^5.2.7"
   }
 }
