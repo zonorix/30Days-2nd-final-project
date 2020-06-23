@@ -1,21 +1,21 @@
-const carouselModule = (() => {
-  'use strict';
+'use strict';
 
-  // swiperオプション
-  const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    spaceBetween: 28,
-    width: 422,
-    height: 368,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+import Swiper from 'swiper';
+
+// swiperオプション
+const mySwiper = new Swiper('.swiper-container', { // eslint-disable-line
+  loop: true,
+  spaceBetween: 28,
+  width: 422,
+  height: 368,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  breakpoints: {
+    767: {
+      width: 276.45,
     },
-    breakpoints: {
-      767: {
-        width: 276.45,
-      },
-    },
-  });
-})();
+  },
+});

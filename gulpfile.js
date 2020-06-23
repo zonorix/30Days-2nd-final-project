@@ -26,6 +26,7 @@ const compileSass = (done) => {
         outputStyle: 'expanded',
       })
     )
+    .pipe(pxtorem())
     .pipe(
       postcss([
         autoprefixer({
@@ -35,7 +36,6 @@ const compileSass = (done) => {
       ])
     )
     .pipe(postcss([mqpacker()]))
-    .pipe(pxtorem())
     .pipe(dest('dist/css'));
   done();
 };
@@ -93,7 +93,7 @@ const serve = (done) => {
     startPath: 'index.html',
     notify: false,
     open: 'external',
-    host: '192.168.11.51',
+    host: '192.168.1.18',
   });
   done();
 };
