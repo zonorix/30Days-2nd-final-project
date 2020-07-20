@@ -48,7 +48,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash.template": "^4.5.0",
     "swiper": "^5.4.5",
     "what-input": "^5.2.7"
