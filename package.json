@@ -50,7 +50,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
-    "swiper": "^5.4.5",
+    "swiper": "^6.5.1",
     "what-input": "^5.2.7"
   }
 }
